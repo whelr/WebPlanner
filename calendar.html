@@ -1,0 +1,47 @@
+<head>
+  <meta charset="UTF-8">
+  <title>WebPlanner</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.js"></script>
+  <script src="calendar.js"></script>
+  <link rel="stylesheet" href="calendar.css"/>
+</head>
+<body>
+  <h1> My Planner</h1>
+  <div class="ui label">
+    <button class="ui labeled icon button" onclick="previousMonth(showingMonth, showingYear)">
+      <i class="left arrow icon"></i>
+      Previous
+    </button>
+    <i id="monthAndYearLabel"> Month and Year Table</i>
+    <button class="ui right labeled icon button" onclick="nextMonth(showingMonth, showingYear)">
+      <i class="right arrow icon"></i>
+      Next
+    </button>
+    <button class="ui button" onclick="goToToday()">
+      Today
+    </button>
+  </div>
+  <table class="ui celled table" id="table" >
+    <thead>
+      <tr>
+        <th>Sunday</th>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+        <th>Thursday</th>
+        <th>Friday</th>
+        <th>Saturday</th>
+      </tr>
+    </thead>
+    <tbody id="mainCalendar"></tbody>
+  </table>
+  <div class="ui  buttons" id="categoriesMenu">
+    <button class="ui button">Academic</button>
+    <button class="ui button">Exercise</button>
+    <button class="ui button">Budget</button>
+    <button class="ui button">Misc.</button>
+  </div>
+</body>
