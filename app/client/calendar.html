@@ -10,6 +10,46 @@
 </head>
 <body>
   <h1> My Planner</h1>
+
+  <div class="ui compact menu">
+    <div id="addEventMenu" class="ui simple dropdown item">
+      Add an Event
+      <i class="dropdown icon"></i>
+      <div class="menu">
+        <div class="ui labeled input">
+          <div class="ui label">
+            Event Name:
+          </div>
+          <input id="input1" onchange="let input1=this.value" type="text" placeholder="Name of event...">
+        </div>
+
+        <div class="ui labeled input">
+          <div class="ui label">
+            Event Category:
+          </div>
+          <!-- Maybe radio boxes
+            -->
+          <input id="input2" onchange="var input2=this.value" type="text" placeholder="Type of event...">
+        </div>
+        <div class="ui labeled input">
+          <div class="ui label">
+            Date:
+          </div>
+          <input id="input3" onchange="let input3=this.value" type="text" placeholder="MM/DD/YYYY...">
+        </div>
+        <div class="ui labeled input">
+          <div class="ui label">
+            Time:
+          </div>
+          <input id="input4" onchange="let input4=this.value" type="text" placeholder="ex: 8:00 AM to 3:00 PM...">
+        </div>
+        <button id="action1" onclick="alert(input1.value+'\n'+input2.value+'\n'+input3.value+'\n'+input4.value)" class="ui action button">
+          Add Event
+        </button>
+      </div>
+    </div>
+  </div>
+
   <div class="ui label">
     <button class="ui labeled icon button" onclick="previousMonth(showingMonth, showingYear)">
       <i class="left arrow icon"></i>
