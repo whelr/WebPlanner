@@ -137,12 +137,99 @@ console.log(isCurrentDate('10/29/2019')); // should return false (smaller month)
 console.log(isCurrentDate('11/29/2018')); // should return false (smaller year)
 console.log(isCurrentDate(''));           // should return false (empty value)
 
-function parseTime(string){
-  // string parser for exact time
-
+function charSearch(string, char){
+  for(let i = 0; i < string.length; i++){
+    if(string[i] === char) return true;
+  }
+  return false;
 }
 
-parseTime('')
+let truth = charSearch('8:00-12:30', '-');
+let lie = charSearch('abcdefg', '-');
+console.log("charSearch1: "+truth);
+console.log("charSearch2: "+lie);
+
+function legalDescription(char){
+  if(char === 'a' || char === 'A'){return true;}
+  if(char === 'p' || char === 'P'){return true;}
+  if(char === 'm' || char === 'M'){return true;}
+  return false;
+}
+
+console.log("legalDescription(\'a\'): "+legalDescription('a'));
+console.log("legalDescription(\'A\'): "+legalDescription('A'));
+console.log("legalDescription(\'p\'): "+legalDescription('p'));
+console.log("legalDescription(\'P\'): "+legalDescription('P'));
+console.log("legalDescription(\'m\'): "+legalDescription('m'));
+console.log("legalDescription(\'M\'): "+legalDescription('M'));
+console.log("legalDescription(\'b\'): "+legalDescription('b'));
+console.log("legalDescription(\'\'): "+legalDescription(''));
+console.log("legalDescription(\'0\'): "+legalDescription('0'));
+
+function parseTimeValid(array){
+  for(let i = 0; i < array[0].length; i++){
+    //console.log(array[0][i]);
+    if(!isDigit(array[0][i]) && array[0][i] !== ':'){
+      //console.log('first loop trip')
+      return false;
+    }
+  }
+  for(let i = 0; i < array[1].length; i++){
+    if(!legalDescription(array[1][i])){
+      //console.log('second loop trip');
+      return false;
+    }
+  }
+  return true;
+}
+
+console.log("parseTimeValid(['8:00', 'AM']): "+parseTimeValid(['8:00','AM']));
+console.log("parseTimeValid(['8:0a', 'AM']): "+parseTimeValid(['8:0a','AM']));
+console.log("parseTimeValid(['B:00', 'AM']): "+parseTimeValid(['B:00','AM']));
+console.log("parseTimeValid(['8:00', 'Ab']): "+parseTimeValid(['8:00','Ab']));
+console.log("parseTimeValid(['8:00', 'TM']): "+parseTimeValid(['8:00','TM']));
+
+function parseTime(string){
+  // string parser for exact time
+  // assumes all strings are formatted as "8:00 AM to 12:00 PM" or follows the basic
+  // grammar "tt:tt T to tt:tt T", where t is a time digit and T can be 'AM' or 'PM'
+  if(string === '') return null;
+
+  let retval = [];
+  let elements;
+
+  if(string.search(' to ')){
+    elements = string.split(' to ');
+  }else{
+    return null;
+  }
+  let start = elements[0].split(' ');
+  if(parseTimeValid(start)){
+    retval.push(start);
+  }else{
+    return null;
+  }
+  let end = elements[1].split(' ');
+  if(parseTimeValid(end)){
+    retval.push(end);
+  }else{
+    return null;
+  }
+  return retval;
+}
+
+let returned = parseTime('8:00 AM to 12:00 PM');
+console.log('Return of \'8:00 AM to 12:00 PM\' from parseTime: '+returned);
+console.log('Entry 0: '+returned[0]);
+console.log('Entry 1: '+returned[1]);
+let fail = parseTime('');
+console.log('Return of fail: '+fail);
+returned = parseTime('8:t0 AM to 12:00 PM');
+console.log('Return of \'8:t0 AM to 12:00 PM\' from parseTime: '+returned);
+returned = parseTime('8:00 AM to 12:00 KM');
+console.log('Return of \'8:00 AM to 12:00 KM\' from parseTime: '+returned);
+returned = parseTime('8:00 AM to 1P:00 KM');
+console.log('Return of \'8:00 AM to 1P:00 PM\' from parseTime: '+returned);
 
 function isTimeConflict(string){
 
