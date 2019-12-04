@@ -234,3 +234,43 @@ console.log('Return of \'8:00 AM to 1P:00 PM\' from parseTime: '+returned);
 function isTimeConflict(string){
 
 }
+
+function addEvent(s1, s2, s3, s4){
+  if(s1 === '' || s2 === '' || s3 === '' || s4 === ''){
+    alert("Error. Required fields not filled in.");
+    return;
+  }
+  
+  if(!isCategory(s2)){
+    alert("Error. Event Category is illegal name.");
+    return;
+  }
+  
+  if(isCurrentDate(s3) === false){
+    alert("Error. Illegal format of event date.");
+    return;
+  }
+  
+  let timeArray = parseTime(s3);
+  
+  if(timeArray === null){
+    alert("Error. Illegal format of event time.");
+    return;
+  }else{
+    let startTime = ''+timeArray[0][0]+timeArray[0][1];
+    let endTime = ''+timeArray[1][0]+timeArray[1][1];
+  }
+  
+  var newEvent={
+    EventTitle: s1,
+    EventType: s2,
+    EventDate: s3,
+    EventTimeS: startTime,
+    EventTimeF: endTime,
+    EventDescription: ''
+  }
+  
+  Stuff.insert(newEvent);
+  alert("Successfully updated schedule.");
+  return;
+}
