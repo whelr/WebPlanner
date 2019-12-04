@@ -20,7 +20,7 @@ function eventExists(string){
 function isCategory(string){
   // checks if input is a valid category
   switch(string){
-    case "School": return true;
+    case "Academic": return true;
     case "Financial": return true;
     case "Exercise": return true;
     case "Misc": return true;
