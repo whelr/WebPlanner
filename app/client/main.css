@@ -26,8 +26,7 @@ li {
 }
 
 body {
-  background-image: url("calendar.jpg");
-  background-repeat: no-repeat;
+  background: url('images/calendar.jpg') no-repeat fixed;
   background-size: 100%;
   width: 100%;
   height: 100%;
