@@ -9,6 +9,7 @@ Course:       CS 320-01
 Date:         11/28/2019
 Last Edit:    11/28/2019 at 6:30 PM
  */
+import { Stuff } from '.../api/stuff/stuff.js';
 
 function eventExists(string){
   // search algorithm for events of same name
@@ -274,6 +275,7 @@ function addEvent(s1, s2, s3, s4){
   }
   
   Stuff.insert(newEvent);
+  console.log(Stuff)
   alert("Successfully updated schedule.");
   return;
 }
