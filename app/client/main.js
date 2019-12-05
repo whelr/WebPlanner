@@ -22,5 +22,7 @@ Template.hello.events({
 });
 
 function gotoFunction() {
+  var getButton = document.getElementById("login");
+  getButton.
 
 }
