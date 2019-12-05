@@ -34,7 +34,7 @@ if (Meteor.isServer) {
         deleteTask.apply(invocation, [taskId]);
 
         // Verify that the method does what we expected
-        assert.equal(Stuff.find({ EventDate: 'Party' }), true);
+        assert.equal(Stuff.find({ EventTitle: 'Party' }), true);
       });
     });
   });
