@@ -9,6 +9,7 @@ Course:       CS 320-01
 Date:         11/28/2019
 Last Edit:    11/28/2019 at 6:30 PM
  */
+import { Stuff } from '.../api/stuff/stuff.js';
 
 function eventExists(string){
   // search algorithm for events of same name
@@ -27,7 +28,6 @@ function isCategory(string){
     case "Miscellaneous": return true;
     default: return false;
   }
-  return false;
 }
 
 function isDigit(char){
@@ -236,13 +236,13 @@ function isTimeConflict(string){
 }
 
 function addEvent(s1, s2, s3, s4){
-  if(s1 === '' || s2 === '' || s3 === '' || s4 === ''){
+  if(s1 === "" || s2 === "" || s3 === "" || s4 === ""){
     alert("Error. Required fields not filled in.");
     return;
   }
   
-  if(!isCategory(s2)){
-    alert("Error. Event Category is illegal name.");
+  if(isCategory(s2) == false){
+    alert("Error. Event Category is illegal name." + s2);
     return;
   }
   
@@ -251,7 +251,11 @@ function addEvent(s1, s2, s3, s4){
     return;
   }
   
-  let timeArray = parseTime(s3);
+  let timeArray = parseTime(s4);
+  console.log(timeArray)
+
+  let startTime = null
+  let endTime = null
   
   if(timeArray === null){
     alert("Error. Illegal format of event time.");
@@ -271,6 +275,7 @@ function addEvent(s1, s2, s3, s4){
   }
   
   Stuff.insert(newEvent);
+  console.log(Stuff)
   alert("Successfully updated schedule.");
   return;
 }
