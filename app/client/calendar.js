@@ -1,3 +1,5 @@
+import { Stuff } from '.../api/stuff/stuff.js';
+
 var currentDate = new Date();
 var currentYear = currentDate.getFullYear();
 var currentMonth = currentDate.getMonth();
@@ -25,8 +27,14 @@ function getMonthLayout(month, year){
         newCell.innerText = " ";
       } else if( date > daysInMonth){
         break;
-      }else{
-        newCell.innerText = date + " ";
+      }else {
+        var formattedDate = showingMonth + "/" + Date + "/" + showingYear
+        var dates_stuff = Stuff.find({EventDate: formattedDate}).fetch()
+        var StringOfEvents = ""
+        for (date in dates_stuff ) {
+          StringOfEvents.append(date.EventTitle + "\n")
+        }
+        newCell.innerText = date + "\n" + StringOfEvents;
         date++;
       }
     }
