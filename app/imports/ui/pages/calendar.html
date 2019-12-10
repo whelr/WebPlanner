@@ -58,16 +58,16 @@
     </div>
 
     <div class="ui label">
-      <button class="ui labeled icon button" onclick="previousMonth(showingMonth, showingYear)">
+      <button class="ui labeled icon button" id="prevMonth">
         <i class="left arrow icon"></i>
         Previous
       </button>
       <i id="monthAndYearLabel"> Month and Year Label </i>
-      <button class="ui right labeled icon button" onclick="nextMonth(showingMonth, showingYear)">
+      <button class="ui right labeled icon button" id="nextMonth">
         <i class="right arrow icon"></i>
         Next
       </button>
-      <button class="ui button" onclick="goToToday()">
+      <button class="ui button" id="goToToday">
         Today
       </button>
     </div>
@@ -91,6 +91,10 @@
       <button class="ui button">Budget</button>
       <button class="ui button">Misc.</button>
     </div>
+    <button id="alertButton" class="ui button">
+      ALERT
+    </button>
+
   </body>
 
 </template>

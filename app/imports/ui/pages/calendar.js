@@ -6,10 +6,13 @@ import { Stuff } from '../../api/stuff/stuff.js';
 var currentDate = new Date();
 var currentYear = currentDate.getFullYear();
 var currentMonth = currentDate.getMonth();
-var showingYear;
-var showingMonth;
+var showingYear = currentYear;
+var showingMonth = currentMonth;
 var monthList =["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 //var dayList = ["Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+function alertSomething(){
+  console.log("hello");
+}
 
 function getHeaderLabel(month, year){
   var getLabel = document.getElementById("monthAndYearLabel");
@@ -88,7 +91,19 @@ function goToToday(){
 }
 
 
+
+
 window.onload = function(){
+  document.getElementById("alertButton").addEventListener("click", alertSomething);
+  document.getElementById("prevMonth").addEventListener("click", function(){
+    previousMonth(showingMonth, showingYear);
+  });
+  document.getElementById("nextMonth").addEventListener("click", function(){
+    nextMonth(showingMonth, showingYear);
+  });
+  document.getElementById("goToToday").addEventListener("click", function(){
+   goToToday();
+  });
  getHeaderLabel(currentMonth, currentYear);
  showCalendar(currentMonth, currentYear);
 }
