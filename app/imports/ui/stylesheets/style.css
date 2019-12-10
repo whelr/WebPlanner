@@ -1,0 +1,29 @@
+.ui.floated.left.top.image{
+  padding-top:25px;
+  padding-bottom:0px;
+}
+
+
+.ui.menu {
+  padding-left :20px;
+  padding-right :20px;
+  margin-bottom:0px ;
+}
+h1 {
+  padding-top:10px;
+
+}
+
+.ui.top.attached.left.floated.header {
+  background-color: transparent;
+  color: white;
+  border:0px;
+  font-size: 3.0em;
+}
+.ui.top.header {
+  color: white;
+  padding-bottom:20px;
+  padding-top:10px;
+  position: absolute;
+  top: 50px;
+  left: 16px;

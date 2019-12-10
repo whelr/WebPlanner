@@ -1,0 +1,96 @@
+
+<template name="Calendar_Page">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>WebPlanner</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.js"></script>
+    <script src="calendar.js"></script>
+    <script src="addEvent.js"></script>
+    <link rel="stylesheet" href="calendar.css"/>
+  </head>
+
+
+  <body>
+    <h1> My Planner </h1>
+    <div class="ui right compact menu">
+      <div id="addEventMenu" class="ui simple dropdown item">
+        Add an Event
+        <i class="dropdown icon"></i>
+        <div class="menu">
+          <div class="ui labeled input">
+            <div class="ui label">
+              Event Name:
+            </div>
+            <input id="input1" onchange="let input1=this.value" type="text" placeholder="Name of event...">
+          </div>
+          <div class="ui labeled input">
+            <div class="ui label">
+              Event Category:
+            </div>
+            <!-- Maybe radio boxes
+              -->
+            <input id="input2" onchange="var input2=this.value" type="text" placeholder="Type of event...">
+          </div>
+          <div class="ui labeled input">
+            <div class="ui label">
+              Date:
+            </div>
+            <input id="input3" onchange="let input3=this.value" type="text" placeholder="MM/DD/YYYY...">
+          </div>
+          <div class="ui labeled input">
+            <div class="ui label">
+              Time:
+            </div>
+            <input id="input4" onchange="let input4=this.value" type="text" placeholder="ex: 8:00 AM to 3:00 PM...">
+          </div>
+          <button id="action1" onclick="alert(input1.value+'\n'+input2.value+'\n'+input3.value+'\n'+input4.value)" class="ui action button">
+            Add Event
+          </button>
+          <button id="action2" onclick="addEvent(input1.value, input2.value, input3.value, input4.value);" class="ui action button">
+            Add Event 2
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="ui label">
+      <button class="ui labeled icon button" onclick="previousMonth(showingMonth, showingYear)">
+        <i class="left arrow icon"></i>
+        Previous
+      </button>
+      <i id="monthAndYearLabel"> Month and Year Table</i>
+      <button class="ui right labeled icon button" onclick="nextMonth(showingMonth, showingYear)">
+        <i class="right arrow icon"></i>
+        Next
+      </button>
+      <button class="ui button" onclick="goToToday()">
+        Today
+      </button>
+    </div>
+    <table class="ui celled table" id="table" >
+      <thead>
+        <tr>
+          <th>Sunday</th>
+          <th>Monday</th>
+          <th>Tuesday</th>
+          <th>Wednesday</th>
+          <th>Thursday</th>
+          <th>Friday</th>
+          <th>Saturday</th>
+        </tr>
+      </thead>
+      <tbody id="mainCalendar"></tbody>
+    </table>
+    <div class="ui  buttons" id="categoriesMenu">
+      <button class="ui button">Academic</button>
+      <button class="ui button">Exercise</button>
+      <button class="ui button">Budget</button>
+      <button class="ui button">Misc.</button>
+    </div>
+  </body>
+
+</template>

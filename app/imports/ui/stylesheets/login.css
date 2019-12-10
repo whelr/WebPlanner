@@ -1,0 +1,23 @@
+body {
+  background: url('/images/background.jpg') no-repeat fixed;
+  background-size: cover;
+}
+
+.leftpane {
+  margin: 40px 40px;
+  width: 40%;
+  height: 60%;
+  float: left;
+}
+
+ul {
+  position: relative;
+  top: 40px;
+  list-style-type: none;
+  display: block;
+}
+
+li {
+  width: 100%;
+  margin: 5px;
+}

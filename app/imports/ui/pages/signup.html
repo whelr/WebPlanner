@@ -1,0 +1,40 @@
+
+
+<template name="Signup_Page">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css">
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.js"></script>
+    <link rel="stylesheet" href="main.css">
+  </head>
+
+  <body>
+    <form class="ui form">
+      <div class="required field">
+        <label>First Name</label>
+        <input type="text" name="first-name" placeholder="First Name" onchange="let firstname = this.value;">
+      </div>
+      <div class="required field">
+        <label>Last Name</label>
+        <input type="text" name="last-name" placeholder="Last Name" onchange="let lastname = this.value;">
+      </div>
+      <div class="required field">
+        <label>E-mail Address</label>
+        <input type="text" name="email_address" placeholder="address" onchange="let address = this.value;">
+      </div>
+      <div class="required field">
+        <label>Password</label>
+        <input type="password" name="password" placeholder="password" onchange="let password = this.value;">
+      </div>
+      <div class="required field">
+        <label>Re-enter Password</label>
+        <input type="password" name="verify_password" placeholder="password" onchange="let verify = this.value;">
+      </div>
+      <button class="ui button" type="submit">Submit</button>
+    </form>
+  </body>
+
+</template>
