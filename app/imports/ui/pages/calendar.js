@@ -9,7 +9,7 @@ var currentMonth = currentDate.getMonth();
 var showingYear;
 var showingMonth;
 var monthList =["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-var dayList = ["Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+//var dayList = ["Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
 function getHeaderLabel(month, year){
   var getLabel = document.getElementById("monthAndYearLabel");
@@ -86,7 +86,11 @@ function goToToday(){
   clearMainCalendar();
   showCalendar(currentMonth, currentYear);
 }
+
+
 window.onload = function(){
-  showCalendar(currentMonth, currentYear);
-};
+ getHeaderLabel(currentMonth, currentYear);
+ showCalendar(currentMonth, currentYear);
+}
+
 

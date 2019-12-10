@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="69844cf2-92c7-4dec-8af0-4868b3cf501c" name="Default Changelist" comment="main calendar">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/client/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/client/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/imports/ui/pages/calendar.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/imports/ui/pages/calendar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/imports/ui/pages/calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/imports/ui/pages/calendar.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
