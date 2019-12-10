@@ -1,0 +1,10 @@
+.leftpane {
+  /* The image used */
+  background-image: url(/images/background.jpg);
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top:350px;
+  padding-bottom: 350px;
+}
