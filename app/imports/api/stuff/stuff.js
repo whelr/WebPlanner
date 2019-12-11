@@ -31,21 +31,21 @@ export const StuffSchema = new SimpleSchema({
 	EventTimeS: {
 		label: 'StartTime',
 		type: String,
-		optional: false,
+		optional: true,
 		max: 8
 	},
 
 	EventTimeF: {
 		label: 'FinishTime',
 		type: String,
-		optional: false,
+		optional: true,
 		max: 8
 	},
 
 	EventDescription: {
 		label: 'Description',
 		type: String,
-		optional: false,
+		optional: true,
 		max: 10000
 	},
 
