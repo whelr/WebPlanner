@@ -227,8 +227,6 @@ function isTimeConflict(string){
 }
 
 export function addEvent(s1, s2, s3, s4){
-
-
   if(s1 === "" || s2 === "" || s3 === "" || s4 === ""){
     alert("Error. Required fields not filled in.");
     return;
@@ -267,7 +265,7 @@ export function addEvent(s1, s2, s3, s4){
     EventDescription: ''
   }
 
-  Stuff.insert(newEvent);
+  Stuff.insert( { newEvent } );
   console.log(Stuff)
   alert("Successfully updated schedule.");
   return;
@@ -361,21 +359,25 @@ function goToToday(){
   showCalendar(currentMonth, currentYear);
 }
 
-window.onload = function(){
+Template.Calendar_Page.rendered = function(){
+  getHeaderLabel(currentMonth, currentYear);
+  showCalendar(currentMonth, currentYear);
   document.getElementById("alertButton").addEventListener("click", alertSomething);
+
   document.getElementById("prevMonth").addEventListener("click", function(){
     previousMonth(showingMonth, showingYear);
   });
+
   document.getElementById("nextMonth").addEventListener("click", function(){
     nextMonth(showingMonth, showingYear);
   });
+
   document.getElementById("goToToday").addEventListener("click", function(){
    goToToday();
   });
+
  document.getElementById("action2").addEventListener("click",function(){
     addEvent(input1.value, input2.value, input3.value, input4.value);
   });
- getHeaderLabel(currentMonth, currentYear);
- showCalendar(currentMonth, currentYear);
 }
 

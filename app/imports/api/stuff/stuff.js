@@ -47,8 +47,7 @@ export const StuffSchema = new SimpleSchema({
 		type: String,
 		optional: true,
 		max: 10000
-	},
-
+	}
 
 });
 
