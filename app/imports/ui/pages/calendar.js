@@ -381,6 +381,7 @@ Template.Calendar_Page.rendered = function(){
  document.getElementById("action2").addEventListener("click",function(){
     addEvent(input1.value, input2.value, input3.value, input4.value);
   });
+ console.log("user viewing calendar is " + Meteor.userId())
 }
 
 window.onload = function(){

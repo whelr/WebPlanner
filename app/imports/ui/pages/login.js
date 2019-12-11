@@ -7,7 +7,13 @@ Template.Login_Page.events({
     var email = $('[name=email]').val();
     var password = $('[name=password]').val();
     Meteor.loginWithPassword(email, password, function(error){
-      console.log(error.reason);
+      if(!error) {
+      	console.log("User logged in");
+      	console.log(Meteor.userId())
+      	FlowRouter.go("Calendar_Page")
+      } else {
+      	console.log(error);
+      }
     });
   }
 });
