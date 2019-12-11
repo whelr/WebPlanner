@@ -9,7 +9,6 @@
     <script type="text/javascript"
             src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.js"></script>
     <script src="calendar.js"></script>
-    <script src="addEvent.js"></script>
     <link rel="stylesheet" href="calendar.css"/>
   </head>
 
@@ -47,10 +46,10 @@
             </div>
             <input id="input4" onchange="let input4=this.value" type="text" placeholder="ex: 8:00 AM to 3:00 PM...">
           </div>
-          <button id="action1" onclick="alert(input1.value+'\n'+input2.value+'\n'+input3.value+'\n'+input4.value)" class="ui action button">
+          <button id="action1"  onclick="alert(input1.value+'\n'+input2.value+'\n'+input3.value+'\n'+input4.value);" class="ui action button">
             Add Event
           </button>
-          <button id="action2" onclick="addEvent(input1.value, input2.value, input3.value, input4.value);" class="ui action button">
+          <button id="action2"  class="ui action button">
             Add Event 2
           </button>
         </div>
@@ -92,7 +91,7 @@
       <button class="ui button">Misc.</button>
     </div>
     <button id="alertButton" class="ui button">
-      ALERT
+      SEARCH FOR IT
     </button>
 
   </body>
