@@ -10,12 +10,12 @@ Template.Signup_Page.events({
       email: email,
       password: password
     });
-    Router.go('Login_Page');
+    FlowRouter.go('Login_Page');
   }
 });
 
 FlowRouter.route('/signup', {
-  name: 'Login_Page',
+  name: 'Signup_Page',
   action() {
     Accounts.createUser(username, password);
   },
