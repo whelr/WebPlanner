@@ -8,8 +8,6 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript"
             src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.js"></script>
-    <script src="calendar.js"></script>
-    <script src="addEvent.js"></script>
     <link rel="stylesheet" href="calendar.css"/>
   </head>
 
@@ -47,10 +45,10 @@
             </div>
             <input id="input4" onchange="let input4=this.value" type="text" placeholder="ex: 8:00 AM to 3:00 PM...">
           </div>
-          <button id="action1" onclick="alert(input1.value+'\n'+input2.value+'\n'+input3.value+'\n'+input4.value)" class="ui action button">
+          <button id="action1"  onclick="alert(input1.value+'\n'+input2.value+'\n'+input3.value+'\n'+input4.value);" class="ui action button">
             Add Event
           </button>
-          <button id="action2" onclick="addEvent(input1.value, input2.value, input3.value, input4.value);" class="ui action button">
+          <button id="action2"  class="ui action button">
             Add Event 2
           </button>
         </div>
@@ -58,16 +56,16 @@
     </div>
 
     <div class="ui label">
-      <button class="ui labeled icon button" onclick="previousMonth(showingMonth, showingYear)">
+      <button class="ui labeled icon button" id="prevMonth">
         <i class="left arrow icon"></i>
         Previous
       </button>
-      <i id="monthAndYearLabel"> Month and Year Table</i>
-      <button class="ui right labeled icon button" onclick="nextMonth(showingMonth, showingYear)">
+      <i id="monthAndYearLabel"> Month and Year Label </i>
+      <button class="ui right labeled icon button" id="nextMonth">
         <i class="right arrow icon"></i>
         Next
       </button>
-      <button class="ui button" onclick="goToToday()">
+      <button class="ui button" id="goToToday">
         Today
       </button>
     </div>
@@ -91,6 +89,11 @@
       <button class="ui button">Budget</button>
       <button class="ui button">Misc.</button>
     </div>
+    <button id="alertButton" class="ui button">
+      SEARCH FOR IT
+    </button>
+
   </body>
+      <script src="calendar.js"></script>
 
 </template>
