@@ -3,7 +3,7 @@ import { SimpleSchema } from 'meteor/aldeed:simple-schema';
 import { Meteor } from 'meteor/meteor';
 import { check } from 'meteor/check';
 
-export const Stuff = new Mongo.Collection('Stuff');
+export const Stuff = new Mongo.Collection('Stuff', { connection: null });
 
 export const StuffSchema = new SimpleSchema({
 
@@ -13,7 +13,6 @@ export const StuffSchema = new SimpleSchema({
 		optional: false,
 		max: 100
 	},
-
 	EventType: {
 		label: 'Category',
 		type: String,
@@ -25,11 +24,11 @@ export const StuffSchema = new SimpleSchema({
 		label: 'Date',
 		type: String,
 		optional: false,
-		max: 8
+		max:11
 	},
 
 	EventTimeS: {
-		label: 'StartTime',
+		//label: 'StartTime',
 		type: String,
 		optional: true,
 		max: 8
@@ -43,26 +42,25 @@ export const StuffSchema = new SimpleSchema({
 	},
 
 	EventDescription: {
-		label: 'Description',
+	  label: 'Description',
 		type: String,
 		optional: true,
 		max: 10000
 	}
-
 });
 
 Stuff.attachSchema(StuffSchema);
 
 Meteor.methods({
-	'stuff.insert'(newEvent) {
+	'Stuff.insert'( { newEvent } ) {
 		check(newEvent, StuffSchema);
 		if(!Meteor.userId()) {
 			throw new Meteor.Error("Not an authorized insert");
 		}
-		stuff.insert({newEvent})
+		Stuff.insert( { newEvent } );
 	},
-	'stuff.remove'(removeEvent) {
+	'Stuff.remove'( { removeEvent} ) {
 		check(removeEvent, StuffSchema);
-		Stuff.remove(removeEvent);
+		Stuff.remove( { removeEvent } );
 	},
 })

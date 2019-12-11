@@ -225,6 +225,9 @@ console.log('Return of \'8:00 AM to 1P:00 PM\' from parseTime: '+returned);
 function isTimeConflict(string){
 
 }
+//---------------------------------------------------------============================
+
+
 
 export function addEvent(s1, s2, s3, s4){
   if(s1 === "" || s2 === "" || s3 === "" || s4 === ""){
@@ -243,10 +246,10 @@ export function addEvent(s1, s2, s3, s4){
   }
 
   let timeArray = parseTime(s4);
-  console.log(timeArray)
+  console.log(timeArray);
 
-  let startTime = null
-  let endTime = null
+  let startTime = null;
+  let endTime = null;
 
   if(timeArray === null){
     alert("Error. Illegal format of event time.");
@@ -256,20 +259,28 @@ export function addEvent(s1, s2, s3, s4){
     let endTime = ''+timeArray[1][0]+timeArray[1][1];
   }
 
-  var newEvent={
-    EventTitle: s1.value,
-    EventType: s2.value,
-    EventDate: s3.value,
+  /* let newEvent={
+    EventTitle: "HW",
+    EventType:"Academic",
+    EventDate: "01/01/2020",
+    EventTimeS: "",
+    EventTimeF: "",
+    EventDescription: ''
+  }*/
+
+  Stuff.insert( {
+    EventTitle: s1,
+    EventType:s2,
+    EventDate:s3,
     EventTimeS: startTime,
     EventTimeF: endTime,
     EventDescription: ''
-  }
-
-  Stuff.insert( { newEvent } );
-  console.log(Stuff)
+  });
   alert("Successfully updated schedule.");
   return;
 }
+
+
 //--------------------------------------------
 
 var currentDate = new Date();
@@ -279,8 +290,16 @@ var showingYear = currentYear;
 var showingMonth = currentMonth;
 var monthList =["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 //var dayList = ["Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+
 function alertSomething(){
-  console.log("hello");
+  var formattedDate= '01/01/2020';
+  var dates_stuff = Stuff.find({EventDate: formattedDate}).fetch();
+  var StringOfEvents = "";
+  for (date in dates_stuff ) {
+    StringOfEvents = StringOfEvents.concat("\n", date.EventTitle );
+  }
+  console.log(StringOfEvents);
 }
 
 function getHeaderLabel(month, year){
@@ -303,11 +322,11 @@ function getMonthLayout(month, year){
       } else if( date > daysInMonth){
         break;
       }else {
-        var formattedDate = showingMonth + "/" + Date + "/" + showingYear
-        var dates_stuff = Stuff.find({EventDate: formattedDate}).fetch()
-        var StringOfEvents = ""
+        var formattedDate = showingMonth + "/" + Date + "/" + showingYear;
+        var dates_stuff = Stuff.find({EventDate: formattedDate}).fetch();
+        var StringOfEvents = "";
         for (date in dates_stuff ) {
-          StringOfEvents.append(date.EventTitle + "\n")
+          StringOfEvents.append(date.EventTitle + "\n");
         }
         newCell.innerText = date + "\n" + StringOfEvents;
         date++;
@@ -379,5 +398,6 @@ Template.Calendar_Page.rendered = function(){
  document.getElementById("action2").addEventListener("click",function(){
     addEvent(input1.value, input2.value, input3.value, input4.value);
   });
+
 }
 
