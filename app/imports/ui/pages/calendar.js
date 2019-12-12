@@ -404,10 +404,10 @@ Template.Calendar_Page.rendered = function(){
  document.getElementById("action2").addEventListener("click",function(){
     addEvent(input1.value, input2.value, input3.value, input4.value);
   });
- document.getElementById("showAcademic").addEventListener(('click', showAcademic ));
- document.getElementById("showExercise").addEventListener(('click', showExercise ));
- document.getElementById("showBudget").addEventListener(('click', showBudget ));
- document.getElementById("showMisc").addEventListener(('click', showMisc ));
- document.getElementById("showAll").addEventListener(('click', showAll));
+ document.getElementById("showAcademic").addEventListener('click', showAcademic );
+ document.getElementById("showExercise").addEventListener('click', showExercise );
+ document.getElementById("showBudget").addEventListener('click', showBudget );
+ document.getElementById("showMisc").addEventListener('click', showMisc );
+ document.getElementById("showAll").addEventListener('click', showAll);
 }
 

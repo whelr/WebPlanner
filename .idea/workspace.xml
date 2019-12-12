@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69844cf2-92c7-4dec-8af0-4868b3cf501c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/imports/api/stuff/stuff.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/imports/api/stuff/stuff.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/imports/ui/pages/calendar.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/imports/ui/pages/calendar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/imports/ui/pages/calendar.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/imports/ui/pages/calendar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/imports/ui/pages/calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/imports/ui/pages/calendar.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -85,7 +81,7 @@
       <workItem from="1576007943729" duration="11638000" />
       <workItem from="1576046700707" duration="1297000" />
       <workItem from="1576071573994" duration="6084000" />
-      <workItem from="1576105037208" duration="6854000" />
+      <workItem from="1576105037208" duration="7023000" />
     </task>
     <task id="LOCAL-00001" summary="changed background color">
       <created>1575410163146</created>
@@ -143,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576111379835</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Added Event listeners for filters">
+      <created>1576113698860</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1576113698860</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,6 +171,7 @@
     <MESSAGE value="Event Added to Database &#10;-Working on retriving so it can be shown in the calendar" />
     <MESSAGE value="Retrieved data from DB to show on the calendar-- No" />
     <MESSAGE value="Events now show on their own line &#10;&#10;Appended a new Div instead of just a textNode" />
-    <option name="LAST_COMMIT_MESSAGE" value="Events now show on their own line &#10;&#10;Appended a new Div instead of just a textNode" />
+    <MESSAGE value="Added Event listeners for filters" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Event listeners for filters" />
   </component>
 </project>
