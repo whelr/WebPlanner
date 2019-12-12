@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="69844cf2-92c7-4dec-8af0-4868b3cf501c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/imports/ui/pages/calendar.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/imports/ui/pages/calendar.html" afterDir="false" />
+    <list default="true" id="c01095b2-ce9a-48b8-9009-5dd8dc357627" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/imports/ui/pages/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/imports/ui/pages/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/imports/ui/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/imports/ui/stylesheets/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

@@ -8,3 +8,16 @@
   padding-top:350px;
   padding-bottom: 350px;
 }
+
+
+ul {
+  position: relative;
+  top: 40px;
+  list-style-type: none;
+  display: block;
+}
+
+li {
+  width: 100%;
+  margin: 5px;
+}
