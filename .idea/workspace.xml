@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69844cf2-92c7-4dec-8af0-4868b3cf501c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/imports/ui/pages/calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/imports/ui/pages/calendar.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -81,7 +82,7 @@
       <workItem from="1576007943729" duration="11638000" />
       <workItem from="1576046700707" duration="1297000" />
       <workItem from="1576071573994" duration="6084000" />
-      <workItem from="1576105037208" duration="7023000" />
+      <workItem from="1576105037208" duration="7355000" />
     </task>
     <task id="LOCAL-00001" summary="changed background color">
       <created>1575410163146</created>
@@ -146,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576113698860</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Corrections to prev commit">
+      <created>1576113868686</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1576113868686</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,6 +180,7 @@
     <MESSAGE value="Retrieved data from DB to show on the calendar-- No" />
     <MESSAGE value="Events now show on their own line &#10;&#10;Appended a new Div instead of just a textNode" />
     <MESSAGE value="Added Event listeners for filters" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Event listeners for filters" />
+    <MESSAGE value="Corrections to prev commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Corrections to prev commit" />
   </component>
 </project>

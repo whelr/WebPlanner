@@ -387,8 +387,6 @@ function showAll(){}
 Template.Calendar_Page.rendered = function(){
   getHeaderLabel(currentMonth, currentYear);
   showCalendar(currentMonth, currentYear);
-  document.getElementById("alertButton").addEventListener("click", alertSomething);
-
   document.getElementById("prevMonth").addEventListener("click", function(){
     previousMonth(showingMonth, showingYear);
   });
@@ -404,6 +402,7 @@ Template.Calendar_Page.rendered = function(){
  document.getElementById("action2").addEventListener("click",function(){
     addEvent(input1.value, input2.value, input3.value, input4.value);
   });
+
  document.getElementById("showAcademic").addEventListener('click', showAcademic );
  document.getElementById("showExercise").addEventListener('click', showExercise );
  document.getElementById("showBudget").addEventListener('click', showBudget );
