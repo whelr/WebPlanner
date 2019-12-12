@@ -329,8 +329,10 @@ function getMonthLayout(month, year){
         var  formattedDate = showingMonth+1 + '/' + date + '/' + showingYear;
         var getEvent = Stuff.find({EventDate:formattedDate}).fetch();
         for( let i = 0; i < getEvent.length;  i++){
+          var newElement = document.createElement("div");
           var newTextNodeEvent = document.createTextNode(getEvent[i].EventTitle + '\n');
-          newCell.appendChild(newTextNodeEvent);
+          newElement.appendChild(newTextNodeEvent);
+          newCell.append(newElement);
         }
         date++;
       }

@@ -77,7 +77,7 @@
       <workItem from="1576007943729" duration="11638000" />
       <workItem from="1576046700707" duration="1297000" />
       <workItem from="1576071573994" duration="6084000" />
-      <workItem from="1576105037208" duration="4603000" />
+      <workItem from="1576105037208" duration="4917000" />
     </task>
     <task id="LOCAL-00001" summary="changed background color">
       <created>1575410163146</created>
@@ -121,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576104191578</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Retrieved data from DB to show on the calendar-- No">
+      <created>1576110594574</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1576110594574</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,6 +151,7 @@
     <MESSAGE value="changed background color" />
     <MESSAGE value="Added signup.html file" />
     <MESSAGE value="Event Added to Database &#10;-Working on retriving so it can be shown in the calendar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Event Added to Database &#10;-Working on retriving so it can be shown in the calendar" />
+    <MESSAGE value="Retrieved data from DB to show on the calendar-- No" />
+    <option name="LAST_COMMIT_MESSAGE" value="Retrieved data from DB to show on the calendar-- No" />
   </component>
 </project>
