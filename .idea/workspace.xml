@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="69844cf2-92c7-4dec-8af0-4868b3cf501c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/imports/ui/pages/calendar.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/imports/ui/pages/calendar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/imports/ui/pages/calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/imports/ui/pages/calendar.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -82,7 +83,7 @@
       <workItem from="1576007943729" duration="11638000" />
       <workItem from="1576046700707" duration="1297000" />
       <workItem from="1576071573994" duration="6084000" />
-      <workItem from="1576105037208" duration="7355000" />
+      <workItem from="1576105037208" duration="9004000" />
     </task>
     <task id="LOCAL-00001" summary="changed background color">
       <created>1575410163146</created>
@@ -154,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576113868686</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="REmoved Add event listener for non existent button">
+      <created>1576114244973</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1576114244973</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,6 +189,7 @@
     <MESSAGE value="Events now show on their own line &#10;&#10;Appended a new Div instead of just a textNode" />
     <MESSAGE value="Added Event listeners for filters" />
     <MESSAGE value="Corrections to prev commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrections to prev commit" />
+    <MESSAGE value="REmoved Add event listener for non existent button" />
+    <option name="LAST_COMMIT_MESSAGE" value="REmoved Add event listener for non existent button" />
   </component>
 </project>

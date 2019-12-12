@@ -378,11 +378,41 @@ function goToToday(){
 }
 
 
-function showAcademic(){}
-function showExercise(){}
-function showBudget(){}
-function showMisc(){}
-function showAll(){}
+function showAcademicByCategory(category){
+  clearMainCalendar();
+  var month = showingMonth;
+  var year = showingYear;
+  var mainCalendar = document.getElementById("mainCalendar");
+  var firstDay  =  new Date(year, month).getDay();
+  var daysInMonth = 32 - new Date(year, month, 32).getDate();
+  var date = 1;
+  for (var i = 0; i<5; i++){
+    var newRow = mainCalendar.insertRow(i);
+    for(var j = 0; j<7; j++){
+      var newCell = newRow.insertCell(j);
+      if( i==0 && j<firstDay){
+        var newTextNode = document.createTextNode(" \n");
+        newCell.appendChild(newTextNode);
+      } else if( date > daysInMonth){
+        break;
+      }else {
+        var newTextNode = document.createTextNode(date + '\n');
+        newCell.appendChild(newTextNode);
+        var  formattedDate = showingMonth+1 + '/' + date + '/' + showingYear;
+        var getEvent = Stuff.find({EventDate:formattedDate}).fetch();
+        for( let i = 0; i < getEvent.length;  i++){
+          if(getEvent[i].EventType === category) {
+            var newElement = document.createElement("div");
+            var newTextNodeEvent = document.createTextNode(getEvent[i].EventTitle);
+            newElement.appendChild(newTextNodeEvent);
+            newCell.append(newElement);
+          }
+        }
+        date++;
+      }
+    }
+  }
+}
 
 Template.Calendar_Page.rendered = function(){
   getHeaderLabel(currentMonth, currentYear);
@@ -403,10 +433,21 @@ Template.Calendar_Page.rendered = function(){
     addEvent(input1.value, input2.value, input3.value, input4.value);
   });
 
- document.getElementById("showAcademic").addEventListener('click', showAcademic );
- document.getElementById("showExercise").addEventListener('click', showExercise );
- document.getElementById("showBudget").addEventListener('click', showBudget );
- document.getElementById("showMisc").addEventListener('click', showMisc );
- document.getElementById("showAll").addEventListener('click', showAll);
+ document.getElementById("showAcademic").addEventListener('click', function(){
+   showAcademicByCategory('Academic');
+ });
+  document.getElementById("showExercise").addEventListener('click', function(){
+    showAcademicByCategory('Exercise');
+  });
+  document.getElementById("showFinancial").addEventListener('click', function(){
+    showAcademicByCategory('Financial');
+  });
+  document.getElementById("showMisc").addEventListener('click', function(){
+    showAcademicByCategory('Misc');
+  });
+  document.getElementById("showAll").addEventListener('click', function(){
+    clearMainCalendar();
+    getMonthLayout(showingMonth, showingYear);
+  });
 }
 
