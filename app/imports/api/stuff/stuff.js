@@ -28,7 +28,7 @@ export const StuffSchema = new SimpleSchema({
 	},
 
 	EventTimeS: {
-		//label: 'StartTime',
+		label: 'StartTime',
 		type: String,
 		optional: true,
 		max: 8

@@ -227,8 +227,6 @@ function isTimeConflict(string){
 }
 //---------------------------------------------------------============================
 
-
-
 export function addEvent(s1, s2, s3, s4){
   if(s1 === "" || s2 === "" || s3 === "" || s4 === ""){
     alert("Error. Required fields not filled in.");
@@ -295,14 +293,6 @@ var showingMonth = currentMonth;
 var monthList =["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 //var dayList = ["Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-
-function alertSomething(){
-  var eventTitle = '1/1/2020';
-  var getEvent = Stuff.find({EventDate:eventTitle}).fetch();
-
-  console.log(getEvent[0].EventTitle);
-}
-
 function getHeaderLabel(month, year){
   var getLabel = document.getElementById("monthAndYearLabel");
   getLabel.innerText = monthList[month] + " " + year;
@@ -330,7 +320,7 @@ function getMonthLayout(month, year){
         var getEvent = Stuff.find({EventDate:formattedDate}).fetch();
         for( let i = 0; i < getEvent.length;  i++){
           var newElement = document.createElement("div");
-          var newTextNodeEvent = document.createTextNode(getEvent[i].EventTitle + '\n');
+          var newTextNodeEvent = document.createTextNode(getEvent[i].EventTitle);
           newElement.appendChild(newTextNodeEvent);
           newCell.append(newElement);
         }
@@ -387,6 +377,13 @@ function goToToday(){
   showCalendar(currentMonth, currentYear);
 }
 
+
+function showAcademic(){}
+function showExercise(){}
+function showBudget(){}
+function showMisc(){}
+function showAll(){}
+
 Template.Calendar_Page.rendered = function(){
   getHeaderLabel(currentMonth, currentYear);
   showCalendar(currentMonth, currentYear);
@@ -407,6 +404,10 @@ Template.Calendar_Page.rendered = function(){
  document.getElementById("action2").addEventListener("click",function(){
     addEvent(input1.value, input2.value, input3.value, input4.value);
   });
-
+ document.getElementById("showAcademic").addEventListener(('click', showAcademic ));
+ document.getElementById("showExercise").addEventListener(('click', showExercise ));
+ document.getElementById("showBudget").addEventListener(('click', showBudget ));
+ document.getElementById("showMisc").addEventListener(('click', showMisc ));
+ document.getElementById("showAll").addEventListener(('click', showAll));
 }
 
