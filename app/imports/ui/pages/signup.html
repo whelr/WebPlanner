@@ -12,34 +12,29 @@
   </head>
 
   <body>
-    <div class="leftpane">
-      <ul>
-        <form class="register">
-
-          <li>
-            <h2>Register</h2>
-            <div class="ui left icon input">
-              <i class="user icon"></i>
-              <input type="text" name="email" placeholder="E-mail address">
-            </div>
-          </li>
-
-          <li>
-            <div class="ui left icon input">
-              <i class="key icon"></i>
-              <input type="text" name="password" placeholder="Password">
-            </div>
-          </li>
-
-
-          <li>
-            <p><input class="right ui button" type="submit" value="Create Account"></p>
-          </li>
-        </form>
-      </ul>
-    </div>
-
-
+    <form class="ui form">
+      <div class="required field">
+        <label>First Name</label>
+        <input type="text" name="first-name" placeholder="First Name" onchange="let firstname = this.value;">
+      </div>
+      <div class="required field">
+        <label>Last Name</label>
+        <input type="text" name="last-name" placeholder="Last Name" onchange="let lastname = this.value;">
+      </div>
+      <div class="required field">
+        <label>E-mail Address</label>
+        <input type="text" name="email_address" placeholder="address" onchange="let address = this.value;">
+      </div>
+      <div class="required field">
+        <label>Password</label>
+        <input type="password" name="password" placeholder="password" onchange="let password = this.value;">
+      </div>
+      <div class="required field">
+        <label>Re-enter Password</label>
+        <input type="password" name="verify_password" placeholder="password" onchange="let verify = this.value;">
+      </div>
+      <button class="ui button" type="submit">Submit</button>
+    </form>
   </body>
 
 </template>
