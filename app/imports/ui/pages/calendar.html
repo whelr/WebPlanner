@@ -14,9 +14,12 @@
 
 
   <body>
-    <h1> My Planner </h1>
-    <div class="ui right compact menu">
-      <div id="addEventMenu" class="ui simple dropdown item">
+   <div id="headeTitle">
+     <h1> My Planner </h1>
+   </div>
+    <div id="menu">
+    <div id="newEventMenu" class="ui right compact menu">
+      <div class="ui simple dropdown item">
         Add an Event
         <i class="dropdown icon"></i>
         <div class="menu">
@@ -46,14 +49,12 @@
             </div>
             <input id="input4" onchange="let input4=this.value" type="text" placeholder="ex: 8:00 AM to 3:00 PM...">
           </div>
-          <button id="action1"  onclick="alert(input1.value+'\n'+input2.value+'\n'+input3.value+'\n'+input4.value);" class="ui action button">
-            Add Event
-          </button>
           <button id="action2"  class="ui action button">
-            Add Event 2
+            Add Event
           </button>
         </div>
       </div>
+    </div>
     </div>
 
     <div class="ui label">
@@ -85,11 +86,11 @@
       <tbody id="mainCalendar"></tbody>
     </table>
     <div class="ui  buttons" id="categoriesMenu">
-      <button  id="showAcademic" class="ui button">Academic</button>
-      <button id="showExercise" class="ui button">Exercise</button>
-      <button id ="showFinancial" class="ui button">Financial</button>
-      <button id="showMisc" class="ui button">Misc.</button>
-      <button id="showAll" class="ui button">All</button>
+      <button  id="showAcademic" class=" teal ui button">Academic</button>
+      <button id="showExercise" class="teal ui button">Exercise</button>
+      <button id ="showFinancial" class="teal ui button">Financial</button>
+      <button id="showMisc" class="teal ui button">Misc.</button>
+      <button id="showAll" class="teal ui button">All</button>
     </div>
   </body>
 
