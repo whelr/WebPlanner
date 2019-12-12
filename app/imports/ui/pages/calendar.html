@@ -11,14 +11,13 @@
     <script src="calendar.js"></script>
     <link rel="stylesheet" href="calendar.css"/>
   </head>
-
-
   <body>
-   <div id="headeTitle">
+  <div id="leftThing" >
+   <div id="headerTitle">
      <h1> My Planner </h1>
    </div>
     <div id="menu">
-    <div id="newEventMenu" class="ui right compact menu">
+    <div id="newEventMenu" class="ui grey right compact inverted menu">
       <div class="ui simple dropdown item">
         Add an Event
         <i class="dropdown icon"></i>
@@ -55,12 +54,10 @@
         </div>
       </div>
     </div>
+      <a href="/">
+        <button id="logout" class="ui grey right floated  button" onclick="Meteor.logout();">Logout</button>
+      </a>
     </div>
-
-   <a href="/">
-     <button id="logout" class="ui right floated button" onclick="Meteor.logout();">Logout</button>
-   </a>
-
     <div class="ui label">
       <button class="ui labeled icon button" id="prevMonth">
         <i class="left arrow icon"></i>
@@ -97,6 +94,6 @@
       <button id="showMisc" class="teal ui button">Misc.</button>
       <button id="showAll" class="teal ui button">All</button>
     </div>
+  </div>
   </body>
-
 </template>
