@@ -277,6 +277,10 @@ export function addEvent(s1, s2, s3, s4){
     EventDescription: ''
   });
   alert("Successfully updated schedule.");
+  var showEvent = Stuff.find({});
+  clearMainCalendar();
+  updateCalendar();
+  console.log(showEvent);
   return;
 }
 
@@ -293,13 +297,10 @@ var monthList =["January", "February", "March", "April", "May", "June", "July", 
 
 
 function alertSomething(){
-  var formattedDate= '01/01/2020';
-  var dates_stuff = Stuff.find({EventDate: formattedDate}).fetch();
-  var StringOfEvents = "";
-  for (date in dates_stuff ) {
-    StringOfEvents = StringOfEvents.concat("\n", date.EventTitle );
-  }
-  console.log(StringOfEvents);
+  var eventTitle = '1/1/2020';
+  var getEvent = Stuff.find({EventDate:eventTitle}).fetch();
+
+  console.log(getEvent[0].EventTitle);
 }
 
 function getHeaderLabel(month, year){
@@ -318,21 +319,27 @@ function getMonthLayout(month, year){
     for(var j = 0; j<7; j++){
       var newCell = newRow.insertCell(j);
       if( i==0 && j<firstDay){
-        newCell.innerText = " ";
+        var newTextNode = document.createTextNode(" \n");
+        newCell.appendChild(newTextNode);
       } else if( date > daysInMonth){
         break;
       }else {
-        var formattedDate = showingMonth + "/" + Date + "/" + showingYear;
-        var dates_stuff = Stuff.find({EventDate: formattedDate}).fetch();
-        var StringOfEvents = "";
-        for (date in dates_stuff ) {
-          StringOfEvents.append(date.EventTitle + "\n");
+        var newTextNode = document.createTextNode(date + '\n');
+        newCell.appendChild(newTextNode);
+        var  formattedDate = showingMonth+1 + '/' + date + '/' + showingYear;
+        var getEvent = Stuff.find({EventDate:formattedDate}).fetch();
+        for( let i = 0; i < getEvent.length;  i++){
+          var newTextNodeEvent = document.createTextNode(getEvent[i].EventTitle + '\n');
+          newCell.appendChild(newTextNodeEvent);
         }
-        newCell.innerText = date + "\n" + StringOfEvents;
         date++;
       }
     }
   }
+}
+
+function updateCalendar(){
+  getMonthLayout(showingMonth, showingYear);
 }
 function showCalendar(month, year){
   //show current month and year label
